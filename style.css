@@ -1,0 +1,66 @@
+body {
+    background-image: linear-gradient(#F4F4ED,#DAC4F7);
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+h1 {
+    font-family: Poppins;
+    font-size: 90px;
+    margin-top: 60px;
+    color: #5B5F97;
+}
+
+h2 {
+    font-family: PT Sans;
+    color: red;
+    margin: 0 auto;
+}
+
+.card {
+   width:300px;
+   height:300px;
+   margin: 60px 40px;
+   display: inline-block;
+   background: transparent;
+}
+
+#card1 {
+    background-color: #F7AEF8;
+    box-shadow: 7px 7px 7px #B388EB;
+}
+
+#card2 {
+    background-color: #C3EB78;
+    box-shadow: 7px 7px 7px #138A36;
+}
+
+#card3 { 
+    background-color: #72DDF7;
+    box-shadow: 7px 7px 7px #3C7A89;
+}
+
+#card4 { 
+    background-color: #FABC3C;
+    box-shadow: 7px 7px 7px #D76A03;
+}
+
+#card5 { 
+    background-color: #F9627D;
+    box-shadow: 7px 7px 7px #C65B7C;
+}
+
+#card6 { 
+    background-color: #00AFB5;
+    box-shadow: 7px 7px 7px #004777;
+}
+
+#card7 { 
+    background-color: #FDE74C;
+    box-shadow: 7px 7px 7px #F9CB40;
+}
+
+#card8 { 
+    background-color: #B5BEC6;
+    box-shadow: 7px 7px 7px #6A6262;
+}
