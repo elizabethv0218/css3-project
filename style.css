@@ -7,127 +7,131 @@ body {
 h1 {
     font-family: Poppins;
     font-size: 100px;
-    margin-top: 60px;
-    color: #5B5F97; /*indigo title*/
+    margin-top: 60px; /*located 60 pixels farther down*/
+    color: #5B5F97; /*indigo*/
     text-shadow: 5px 5px lightblue;
     /*the title has an animation called "ghostly" which will last for 1.5 seconds, with a slow start and end, no delay, and the animation will repeat three times according to the @keyframes below*/
     animation: ghostly 1.5s ease-in-out 0s 3 normal;
 }
 
-/*the animation will zoom in and out, appear and disappear, like a ghost*/
+/*the animation will zoom the title in and out, appear and disappear, like a ghost*/
 @keyframes ghostly {
-    0% {opacity:1; font-size:100px;} /*fully visible and big in size*/
+    0% {opacity:1; font-size:100px;} /*fully visible & big in size after the page loads*/
     50% {opacity:0; font-size:50px;} /*loses visibility and smaller in size*/
-    100% {opacity:1; font-size:100px;} /*returns to it's original state*/
+    100% {opacity:1; font-size:100px;} /*returns to it's original state at the end*/
 }
 
 h2 {
-    font-family: PT Sans;
     display:inline; /*prevents the border from stretching to the ends (left & right) of the page*/
-    border: 5px dashed #FF1455; /*border: [thickness, style, red color]*/
+    border: 5px dashed #FF1455; /*border syntax: [thickness, style, color]*/
     color: red;
     font-size: 30px;
     padding: 10px; /*space between the text and border*/
-}
-
-h3 {
-    font-family: PT Sans;
-    padding-top: 30px;
+    background-image: radial-gradient(white, #FFDEDD); /*subtle circular gradient: white in the center becoming a light pink*/
 }
 
 p {
-  padding: 50px 30px 0; /*space within the element: [top, left & right, bottom]; styles the jokes to make them more centered in the div*/
-  font-family: PT Sans;
-  font-size: 20px;
+    padding: 50px 30px 0; /*space within the element: [top, left & right, bottom]; styles the text (jokes) to make them centered in the div*/
+    font-size: 20px;
+}
+
+/*Will move, or translate, the text below the red text farther down*/
+h3, h4 {
+    transform: translate(0px,15px);
+}
+
+h2, h3, h4, p {
+    font-family: PT Sans;
 }
 
 img {
-   padding-top: 50px; /*centers the images vertically*/
+    padding-top: 50px; /*centers the images vertically*/
 }
 
-/*used for highlighting the PUNchlines of the jokes*/
 span {
     font-weight: bold;
-    color: #721CE8;
+    color: black;
+    transition: color 1s; /*used for highlighting the PUNchlines of the jokes from black to purple as mentioned in span:hover*/
 }
 
-/*Cards will be next to each other and flip*/
+span:hover {
+    color: #721CE8; /*purple*/
+}
+
 .card {
-  width: 300px;
-  height: 300px;
-  margin: 60px 40px;
-  display: inline-block;
-  background-color: transparent;
-  overflow:hidden; /*prevents the back div take up space from below the card and allows more uniformity in terms of spacing and the desired format*/
+    width: 300px;
+    height: 300px;
+    margin: 60px 40px; /*will separate the cards from other cards/elements*/
+    display: inline-block; /*has the cards be next to each other*/
+    overflow:hidden; /*prevents the back div from taking up space below the card and allows more uniformity in terms of spacing and the desired format*/
 }
 
 /*when the mouse hovers over the card, the front will flip vertically*/
 .card:hover .fb {
-  transform: rotateX(180deg);
-}
-
-/*will flip the card to the back instead of flipping the image vertically*/
-.fb {
-  position: relative;
-  text-align: center;
-  transition: transform 1s;
-  transform-style: preserve-3d;
-}
-
-/*when the front of the card is displayed, the content at the back will be hidden and vice versa*/
-.front, .back {
-  position: relative;
-  backface-visibility: hidden;
+    transform: rotateX(180deg);
 }
 
 /*the back of the card will flip vertically to be displayed*/
 .back {
-  color: black;
-  transform: rotateX(180deg);
-  
+    color: black;
+    transform: rotateX(180deg);
+}
+
+/*will flip the card to the back instead of flipping the image vertically*/
+.fb {
+    position: relative;
+    text-align: center;
+    transition: transform 1s; /*will have the front and back flip simultaneously*/
+    transform-style: preserve-3d; /*allows content in the back to be displayed when flipped*/
+}
+
+/*when the front of the card is displayed, the content at the back will be hidden and vice versa*/
+.front, .back {
+    position: relative;
+    backface-visibility: hidden;
 }
 
 #pirate {
-    padding-right: 25px; /*meant to center the image better*/
+    padding-right: 25px; /*meant to center the pirate image better*/
 }
 
-/*the following assigns background colors and shadows to the 8 cards*/
-#card1 {
+/*Each card is unique, so they are assigned different background colors and shadows*/
+#card1 { /*light purple*/
     background-color: #F7AEF8;
     box-shadow: 7px 7px 7px #B388EB;
 }
 
-#card2 {
+#card2 { /*green*/
     background-color: #C3EB78;
     box-shadow: 7px 7px 7px #138A36;
 }
 
-#card3 { 
+#card3 { /*light bright blue*/
     background-color: #72DDF7;
     box-shadow: 7px 7px 7px #3C7A89;
 }
 
-#card4 { 
+#card4 { /*orange*/
     background-color: #FABC3C;
     box-shadow: 7px 7px 7px #D76A03;
 }
 
-#card5 { 
+#card5 { /*red*/
     background-color: #F9627D;
     box-shadow: 7px 7px 7px #C65B7C;
 }
 
-#card6 { 
+#card6 { /*blue*/
     background-color: #00AFB5;
     box-shadow: 7px 7px 7px #004777;
 }
 
-#card7 { 
+#card7 { /*yellow*/
     background-color: #FDE74C;
     box-shadow: 7px 7px 7px #F9CB40;
 }
 
-#card8 { 
+#card8 { /*grey*/
     background-color: #B5BEC6;
     box-shadow: 7px 7px 7px #6A6262;
 }
